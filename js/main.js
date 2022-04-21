@@ -1,6 +1,6 @@
 const links = [
     {
-      label: "Week1 notes",
+      label: "Week1 notes - LocalStorage and an activity completed and learned.",
       url: "week1/index.html"
     },
     {
