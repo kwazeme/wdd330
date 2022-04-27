@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-    font-size: 18px; 
+    font-size: 12px; 
     text-align: center;
     padding: 20px;
 }
@@ -43,6 +43,9 @@ footer p:nth-of-type(2) {
     grid-row: 2/2;
     text-align: center;
     color:aliceblue;
+}
+footer a:link, footer a:visited, footer a:active {
+    color: aliceblue;
 }
 
 

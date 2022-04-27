@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>WDD330: Portfolio of Work - Spring 2022</title>
+    <meta name="description" content="WDD230: Assignment Portal; Winter 2022">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wdd330//images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wdd330/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wdd330/images/favicon-16x16.png">
+    <link rel="manifest" href="/wdd330/images/site.webmanifest">
+    <link rel="mask-icon" href="/wdd330/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-config" content="browserconfig.xml">
+  	<meta name="author" content="Kwazeme Ogubie">
+    <link rel="stylesheet" href="/wdd330/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/wdd330/css/base.css" />
+    <link rel="stylesheet" href="/wdd330/css/medium.css">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <!--logo-box and nav-bar goes here-->
+      </header>
+      <main>
+        <!--top-banner-box start-->
+        <div class="top-banner">
+          <h2>Week 2</h2>
+        </div>
+        <!--main content start-->
+        <div class="main-content">
+          <section>
+            <p>
+              Notes:<br />
+              <h4>JNINJA: Programming Basics</h4>
+              <ul>
+                <li>Use <a href="http://es6console.com" target="_blank" rel="noopener noreferrer">Es6console</a>
+                  to run REPL code in a browser or use the usual browser console. REPL code can also run
+                  in the windows command line or VSCode command line using node.
+                </li><br />
+                <li>The language attribute is not necessary in the JavaScript tag when writing in HTML5 but it 
+                  would still work:<br /> 
+                  script src="main.js" language="javascript"> script
+                </li><br />
+                <li>Use babel-6 tag to make your webpage run with latest JavaScript:
+                  <embed src="data/babel.txt" width="100%" height="50" type="text/html">
+                </li><br />
+                <li>Declare variables before using them.
+                  Use "const" for variables that will not be reassigned and "let" for variables that 
+                  will be reassigned.
+                </li>
+                <li>
+                  Quiz Ninja Project<br />
+                  <a href="/wdd330/week2/quiz/index.html" target="_blank" rel="noopener noreferrer">Test the quiz</a><br />
+                  Refresh that Page to test again.
+                </li>
+              </ul>
+              <h4>JNINJA: Arrays, Logic, and Loops</h4>
+              <ul>
+                <li>
+                  Some Array Properties and Methods:
+                  <ul>
+                    <li>array.length; //returns the number of items in arrray.<br />
+                        array.length = n; cuts the array lenght to n. Removes all elements beyond n, or adds blanks (undefined) items if n is larger than initial array length.</li>
+                        <li>array.pop(); //removes last item from array.</li>
+                        <li>array.shift(); // removes first element of arrray.</li>
+                        <li>array.push("element"); // appends element to end of arrray and returns lenght of new array.</li>
+                        <li>array.unshift("element"); // appends element to beginning of array and reurns the new lenght.</li>
+                        <li>array.concat([nArray]); //Adds elements of nArray into array and assigns to a new array unless the assignment is specified.</li>
+                        <li>Set{}; //is a collection of unique elements. <br />
+                            const nSet = new Set(); // set constructor.<br />
+                            nSet.add(element); // adds element into nSet only if element does not exist already in nSet. <br />
+                          if element is in nSet already, operation is ignored.</li>
+                          <li> Ternary operator syntax<br />
+                            condition ? (//code to run if condition is true) : (//code to run if condition is false)</li>
+                            <li>
+                              Quiz Ninja Project<br />
+                              <a href="/wdd330/week2/quiz2/index.html" target="_blank" rel="noopener noreferrer">Test the quiz</a><br />
+                              Refresh that Page to test again.
+                            </li>
+                  </ul>
+                </li>
+              </ul>
+              <h4>JNINJA: Functions</h4>
+              <ul>
+              <li>Functions can be treated like objects: 
+                they can be assigned to variables, stored in arrays or returned by other fucntions.
+              </li>
+              <li>
+                functions can be created with either of 4 methods:
+                <ul>
+                  <li>Using function delaration: function nFunction() {//code block;}</li>
+                  <li>Anonymously: variable = function(){ //code block;};</li>
+                  <li>Using a constructor: variable = new Function("//code block";);<br />
+                  constructor method creates a global scoped fucntions and should be avaoided generally.</li>
+                  <li>Using arrow notation: function = () => {//code block;}. The curly braces is not compulsory for single line of code.</li>
+                </ul>
+              </li>
+              <li>Hoisting is the action of moving variables or fucntion decalrations to the top of the current scope.
+                <br /> To hoist a function just invoke it at the start of the scope or page.
+
+              </li>
+              <li><b>CallBacks:</b> This is a function passed as argument to another function.</li>
+              
+            </ul>
+        
+        </section>
+        </div>
+      </main>
+      <footer>
+        <!--footer content goes here-->
+        <p>
+          &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
+          <br />
+        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/wdd330/index.html">Back to homepage</a></span></p>
+        <script src="/wdd330/js/date-time.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
