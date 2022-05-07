@@ -6,7 +6,12 @@ const links = [
     {
         label: "Week2 notes - Programming basics, functions and arrays.",
         url: "week2/index.html"
+      },
+      {
+        label: "Week3 notes - Objects, DOM & Events.",
+        url: "week3/index.html"
       }
+
   ]
 const ol = document.querySelector("#linkList")
 function loadTitles(element) {

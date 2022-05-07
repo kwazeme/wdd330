@@ -83,7 +83,7 @@ function diviCalc() {
     const outdivi = document.querySelector("#resultDivi");
     outdivi.innerHTML = `The Numbers you entered are: <b><u>${num1}</b></u> and <b><u>${num2}</b></u>
     <br />
-    The product of the numbers is: <b><u>${divi}</b></u>`;   
+    The quotient of the numbers is: <b><u>${divi}</b></u>`;   
 }
 // Call the minus function when the minus button is pressed.
 const diviBtn = document.querySelector("#diviBtn");
