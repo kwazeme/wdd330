@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>WDD330: Portfolio of Work - Spring 2022</title>
+    <meta name="description" content="WDD230: Assignment Portal; Winter 2022">
+    <link rel="apple-touch-icon" sizes="180x180" href="//images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-config" content="browserconfig.xml">
+  	<meta name="author" content="Kwazeme Ogubie">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/medium.css">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <!--logo-box and nav-bar goes here-->
+      </header>
+      <main>
+        <!--top-banner-box start-->
+        <div class="top-banner">
+          <h2>Week 4</h2>
+        </div>
+        <!--main content start-->
+        <div class="main-content">
+          <section>
+            <p>
+              Notes:<br />
+              <h4>JNINJA: Forms</h4>
+              <ul>
+                <li>The basic syntax of a form is the form tag. 
+                  <a href="search.html">Search Form Example</a>                 
+                </li> 
+                <li>Legacy DOM uses a document.forms to return all a collection of all forms on the document.
+                  Each form is them accessible by using the index of the form counting from top of document to bottom as the forms appear in that order.
+                  example: document.forms[0] will return the first form on the document.
+                  <br />
+                  Other ways of accessing form and its elements:
+                  <ol type="a">
+                    <li><code>document.getElementByTagName('form')[0]</code> //gets the first form in document.</li>
+                    <li><code>document.forms.search;</code> //gets the form named "search"</li>
+                    <li><code>document.forms['search'];</code> // also gets the named form. use this method if form name has invalid characters.</li>
+                    <br />Use any of the above assigned to a variable, example "form" to define the form. Then use the below methods to access the form elements.
+                  </ol>
+                  <ol start="i">
+                    <li><code>const [input,button] = form.elements;</code> //gets the input and button element of the form</li>
+                    <li><code>form.searchInput; </code>//gets the named input element of form</li>
+                    <li><code>form['searchInput'];</code> // same as but used for when invalid caharaters are present.</li>
+                    <li><code>form.submit();</code> //submits the form without an event trigger.</li>
+                    <li><code>form.reset();</code> // resets values of the form. Used with caution.</li>
+                    <li><code>
+                      &lt;button type="reset"&gt; Reset&lt; button&gt; </code> // Also resets form inputs values.
+                    </li>
+                    <li><code>form.action='/another/url.ext</code> //define the form url for processing.</li>
+                  </ol>
+                </li>
+                <li>Form Events: Some events trigged by forms input are:
+                  <ol start="a">
+                    <li>focus event; brings focus to active field. example: <code>input.addEventListener('focus', () => alert('focused'), false)</code></li>
+                    <li>blur event <code>input.addEventListener('blur', () => alert('blurred'), false);</code></li>
+                    <li>change event <code>input.addEventListener('change', () => alert('changed'), false);</code></li>
+                    <li>submit event
+                      <pre>
+                        <code>
+const form = document.forms['search'];form.addEventListener ('submit', search, false);
+function search() {    
+  alert(' Form Submitted');}</code>
+                      </pre>
+                    </li>
+                    <li>Form events and methods Example <a href="/week4/hero/hero.html">SuperHero Form</a>
+                      <br /> Form submission creates a JSON.stringify() that can be used in collect form data.</li>
+                  </ol>
+                </li>
+                <li>Form Validation: Do not use only JavaScript as the only mtheod to validate a form.
+                  <br /> Both JavaScript and server side validation should be used in combinations.
+                  JavaScript validation helps to reduce server validation http requests and also to help enhance user experience.
+                </li>
+                <li>Finally, see Ninja Quiz using form controls and event. <a href="/week4/quiz/index.html">Ninja Quiz implimentation</a></li>
+                <li></li>
+              </ul>
+              <h4>Object Oriented Programming</h4>
+              <ul>
+                <li>OOP is programming by creating objects that contain both data and fucntions modeled after real world representations fo objects.
+                  <br />objects have both methods, functions and attributes.
+                </li>
+                <li>There are three concepts in OOP: encasulation, Polymorphism and Inheritance.</li>
+                <li>Encasulation involves enclosing the programming logic wihin and making only methods and functionality available to the user.</li>
+                <li>Polymorphism: The use of same methods by different objects with individual objects being able to override certain methods or to have specific methods that are unique to them.</li>
+                <li>Inheritance: Means aready existing objects in the programming can have their methods and properties taken up by new objects created</li>
+                <li>JavaScript uses both classes and prototype as basis for creating objects.</li>
+                <li><code>new</code> is the keyword for the constructor for creating instances of an object.</li>
+                <li><code>obj.constructor;</code> //returns the constructor property that created the object.</li>
+                <li><code>static name() {};</code> are methods that are unique to the object and cannoot be inherited by new instances.</li>
+                <li>Create only class declarations that have initialization and shared prperties and methods.</li>
+                <li>Additonal methods and properties can be added after the fact: 
+                  <br />Example: <code>objName.prototype.name = function() {};</code> //adds a new method to an existing objName. This method will be live and is inherited by all instances previouly created as well as new instances that will be created.
+                </li>
+                <li>Unique properties or methods sepecific to an instance can be augemented using and assignment statement.
+                  <br /> Example: <code>InstanceName.property = 'new PropertyValue';</code>
+                </li>
+                <li>Mixins is a way of adding properties and methods of some objects to another object without using inheritance.</li>
+                <li>Using OOP to recreate the Ninja Quiz with multiple choice selection instead. <a href="/week4/quiz2/index.html">OOP Nija Quiz</a></li>
+              </ul>
+              <h4>Modern JavaScript Development</h4>
+              <ul>
+                <li>Use libraries to achieve methods and common task but carefully evaluate what you need to avoid bloat. Jquery and Lodash two most popular libraries.</li>
+                <li>npm and Yarn are common package managers. Installing anyone of them will also install the depencies and setting are saved in a package.json file.</li>
+                <li>Modules are self contained pieces of code much like a snippet that can be reused.</li>
+                <li>Before code is deployed, it should be concatenated into a single file, minified and compressed. The script tag should be 
+                  placed just before the closing </body> tag to ensure that all elements on the page have loaded before the script runs.</li>
+                <li></li>
+                <li></li>
+              </ul>
+
+        </section>
+        </div>
+      </main>
+      <footer>
+        <!--footer content goes here-->
+        <p>
+          &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
+          <br />
+        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/index.html">Back to homepage</a></span></p>
+        <script src="/js/date-time.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>

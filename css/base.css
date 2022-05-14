@@ -24,6 +24,13 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+code {
+    color: crimson;
+    background-color: #f1f1f1;
+    font-size: 80%;
+    font-style: italic;
+   
+  }
 
 footer {
     padding: 10px;
