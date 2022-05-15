@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>WDD330: Portfolio of Work - Spring 2022</title>
     <meta name="description" content="WDD230: Assignment Portal; Winter 2022">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="/images/site.webmanifest">
-    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wdd330/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wdd330/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wdd330/images/favicon-16x16.png">
+    <link rel="manifest" href="/wdd330/images/site.webmanifest">
+    <link rel="mask-icon" href="/wdd330/images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="msapplication-config" content="browserconfig.xml">
   	<meta name="author" content="Kwazeme Ogubie">
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/wdd330/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/medium.css">
+    <link rel="stylesheet" href="/wdd330/css/base.css" />
+    <link rel="stylesheet" href="/wdd330/css/medium.css">
   </head>
   <body>
     <div id="content">
@@ -45,26 +45,32 @@
             viz: strings, numbers, booleans, symbols, undefined and null.</li>
               <li>Objects are key value pairs. Like a dictionary or JSON notation.</li>
               <li>Object literals can be used in JavaScript to create a quick local scoped objects containing atrributes, variables and functions (methods)<br />
-              example:<pre>
-                const obj = {
-                  key: 'value1', 
-                  ...
-                  nkey: nvalue,
-                  function(){
-                    //code block;
-                  }};
-            </pre> 
+              example:
+              <code>
+                <pre>
+                  const obj = {
+                    key: 'value1', 
+                    .
+                    .
+                    .
+                    nkey: nvalue,
+                    function(){ //code block;
+                    }};
+              </pre>
+              </code> 
           where the values could be any JavaScript data type and the key is called name.</li>
             <li>Access Object value by dot notation ie; obj.key or obj['key']</li>
             <li>The [] can be used to concatenate two or more key value pairs</li>
             <li>Use an assignment statment to change the value of a key in an object <br />
             or to add a new property. Example:
+            <code>
             <pre>
               obj.key = value; // if key exist in object its value will be overwritten with value,
                               //if not exist it will be created and value assigned.
             </pre>
+            </code>
           </li>
-          <li>Use delete keyword to delete a key value pair from the obj. eg. <i>delete</i> obj.key</li>
+          <li>Use delete keyword to delete a key value pair from the obj. eg. <code><i>delete</i> obj.key</li></code>
           <li>Nested objects have a further key/value pair as the value of the initial key</li>
           <li>Values in a nested object can be accessed using the dot notation like so: obj.key0.key1</li>
           <li>Objects assignment to variables are done by reference and not by copy. Meaning both variables will take same value if one is changed.</li>
@@ -72,8 +78,8 @@
             double quoted names (or keys) and functions are not permitted values.
             it is in essence a data storage format.
           </li>
-          <li><i>JSON.parse(obj);</i> //converts a JSON data to JavaScript object.</li>
-          <li><i>JSON.stringify(obj);</i>// converts a JavaScript object to a JSON data. Functions will be ignored or removed.</li>
+          <li><code><i>JSON.parse(obj);</i> </code>//converts a JSON data to JavaScript object.</li>
+          <li><code><i>JSON.stringify(obj);</i> </code>// converts a JavaScript object to a JSON data. Functions will be ignored or removed.</li>
           <li>Math objects are built in math constants used in calulation.
             All math objects are named in CAPS.
           </li>
@@ -85,18 +91,18 @@
             for large code bases.
           </li>
           <li>RegExp objects are used for matching string patterns. They are useful in find and replace type operations.</li>
-          <li>RegExp constructor: // variable = new RegExp('/patterns/'));</li>
+          <li>RegExp constructor: // <code>variable = new RegExp('/patterns/'));</code></li>
           <li>RegExp method:
             <ul>
-              <li>test(); // checks for match</li>
-              <li>global(); //or /'patterns'/g returns all matches instead of the first one only.</li>
-              <li>ignorecase(); // or /'patterns'/i makes pattern non case sensitive</li>
-              <li>multiline(); // or /'pattern'/m makes pattern multiline.</li>
-              <li><b><i>This</i></b> keyword is used to reference the object it is within.</li>
+              <li><code>test();</code> // checks for match</li>
+              <li><code>global(); </code>//or /'patterns'/g returns all matches instead of the first one only.</li>
+              <li><code>ignorecase(); </code>// or /'patterns'/i makes pattern non case sensitive</li>
+              <li><code>multiline(); </code>// or /'pattern'/m makes pattern multiline.</li>
+              <li><code><b><i>This</i></b> </code>keyword is used to reference the object it is within.</li>
               <li></li>
             </ul>
           </li>
-          <li><a href="/week3/quiz3/index.html" target="_blank" rel="noopener noreferrer">See sample Quiz with objects and methods implementation</a> </li>
+          <li><a href="/wdd330/week3/quiz3/index.html" target="_blank" rel="noopener noreferrer">See sample Quiz with objects and methods implementation</a> </li>
           </ul>
           <h4>The Document Object Model</h4>
           <ul>
@@ -107,20 +113,20 @@
             </li>
             <li>To get elements on a web page use one of these:
               <ol type="a">
-                <li><b><i>getElementById</i></b> //use #elementName to get element.</li>
-                <li><b><i>getElementByClassName</i></b></li>
-                <li><b><i>getElementByTagName</i></b></li>
-                <li><b><i>querySelector</i></b></li>
-                <li><b><i>querySelectorAll</i></b></li>
+                <li><code><b><i>getElementById</i></b> </code>//use #elementName to get element.</li>
+                <li><code><b><i>getElementByClassName</i></b></code></li>
+                <li><code><b><i>getElementByTagName</i></b></code></li>
+                <li><code><b><i>querySelector</i></b></code></li>
+                <li><code><b><i>querySelectorAll</i></b></code></li>
               </ol>
             </li>
             <li>Note that even blank objects within the HTML page is also an object node.</li>
             <li>legacy DOM shortcuts using the dot notatation can be used to get all elements of type from the document object.
               Example:
               <ol type="a">
-                <li><i>Document.images</i> // gets all images on the page.</li>
-                <li><i>Document.links </i>//gets all links in the page.</li>
-                <li><i>Document.anchors</i>//gets all anchor tags in document.</li>
+                <li><code><i>Document.images</i> </code>// gets all images on the page.</li>
+                <li><code><i>Document.links </i></code>//gets all links in the page.</li>
+                <li><code><i>Document.anchors</i></code>//gets all anchor tags in document.</li>
                 <li>Etc</li>
               </ol>
             </li>
@@ -129,13 +135,14 @@
               array methods can be used on it. 
               And it has also a length property.
             </li>
-            <li><i>querySelector</i> is a versatile selector for elements on a age.
+            <li><code><i>querySelector</i></code> is a versatile selector for elements on a age.
             CSS pseudo selectors can be used inside a querySelector to target very precise elements 
           on the page.
-        Example: <pre>
+        Example: <code><pre>
           const ul = document.querySelector('ul#roster');
                     ul.querySelector('li#bats')
         </pre>
+        </code>
         </li>
             <li>JQuery is JavaScript framework built on this kind of CSS-style syntax.</li>
             <!-- <li></li>
@@ -148,8 +155,8 @@
               on the page. 
             </li>
             <li>Events include all forms of interaction on the page, onlick, onload, onresize, onmouseover Etc</li>
-            <li><b><i>AddEventListener</i></b> is the prefered mthod to use rather than the older document.onclick method.</li>
-            <li><a href="/week3/quiz4/index.html" target="_blank" rel="noopener noreferrer">See Ninja Quiz with DOM manupulation and Event Listeners</a>
+            <li><code><b><i>AddEventListener</i></b> </code>is the prefered mthod to use rather than the older document.onclick method.</li>
+            <li><a href="/wdd330/week3/quiz4/index.html" target="_blank" rel="noopener noreferrer">See Ninja Quiz with DOM manupulation and Event Listeners</a>
             note that the answers are non case sensitive.</li>
             <li></li>
           </ul>
@@ -162,8 +169,8 @@
         <p>
           &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
           <br />
-        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/index.html">Back to homepage</a></span></p>
-        <script src="/js/date-time.js"></script>
+        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/wdd330/index.html">Back to homepage</a></span></p>
+        <script src="/wdd330/js/date-time.js"></script>
       </footer>
     </div>
   </body>
