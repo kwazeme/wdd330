@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>WDD330: Portfolio of Work - Spring 2022</title>
+    <meta name="description" content="WDD230: Assignment Portal; Winter 2022">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wdd330/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wdd330/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wdd330/images/favicon-16x16.png">
+    <link rel="manifest" href="/wdd330/images/site.webmanifest">
+    <link rel="mask-icon" href="/wdd330/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-config" content="browserconfig.xml">
+  	<meta name="author" content="Kwazeme Ogubie">
+    <link rel="stylesheet" href="/wdd330/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/wdd330/css/base.css" />
+    <link rel="stylesheet" href="/wdd330/css/medium.css">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <!--logo-box and nav-bar goes here-->
+      </header>
+      <main>
+        <!--top-banner-box start-->
+        <div class="top-banner">
+          <h2>Week 5</h2>
+        </div>
+        <!--main content start-->
+        <div class="main-content">
+          <section>
+            <p>
+              Notes:<br />
+            </p>
+            <h4>JNINJA: Testing and Debugging</h4>
+            <ul>
+              <li>Errors, Exceptions and Warnings.
+                <ol type="I">
+                  <li>Errors:
+                    <ol type="a">
+                      <li>Systems error - error in system or external program</li>
+                      <li>Programmer error - error cased by incorrect syntax or program logic or type.</li>
+                      <li>User error - error introduced by user inteeraction by entering wrong or incorrect input that the program was not built to handle.</li>
+                    </ol>
+                  </li>
+                  <li>Exceptions: Events outside the scope of how a programme is expected to run
+                    the output of the program then lets us know that something not expected has occured.
+                  </li>
+                  <li>Stack trace: sequence of function calls leading back to when an excpetion started happening.</li>
+                  <li>Warnings: these are thrown by the program while running but it does not cause a the program execution to stop.
+                    Warnings need to be taken care of as they could lead to program to continue to run but produce wrong ouputs.
+                  </li>
+                  <li>Strict mode: ensure all warnings and exceptions are amplified, picked up and fixed while the program is in testing before production.
+                    This is recommended. To use strict mode add the strict call to the header or top of a JavaScript code. Like so: <code>'use strict';</code>
+                    Or within a function in which case the strict mode is applied only within the function. Like so: 
+                    <code>function strictly() {'use strict';};</code>. This technique can be prefered expectially when sharing code as it ensures only the codes that 
+                    you have written is using strict.
+                  </li>
+                  <li>Linting tools are encoureaged but they are no gurantee that your code is error proof. Linting helps to ensure uniformity and equal standards for program syntax and is good for teams to use
+                    to make program adhere to same standard and avoid sloppy code. Commonn JavaScript linting plugins are JS Lint and ES Lint
+                  </li>
+                  <li>Feature detection: is the way of finding out if a feature is supported in the user client before it can be used in your program.
+                    This can be done with if statements, by using <code>window.navigator.userAgent</code> call to find out what browser a user is running
+                    But this methods are all mostly not recommended. as it makes code more diffult to maintain.
+                  </li>
+                  <li></li>
+                </ol>
+              </li>
+              <li>Debugging in the browser <br>
+                There are methods that allow the halting of program execution at several or at any given point during execution so a programmer can 
+                check through the values of variables and thus be able to pick up an error or a failure. Breakpoints are used to stop the program excution at points in the programe.
+                Debugging methods include the following:
+                <ol type="a">
+                  <li>Trusty alert: <br>
+                    The <code>alert();</code> outputs the value of a variable of interest at that point during program excution so the programmer can check that the end result is 
+                    correct in terms of what is expected. Use of alerts for debugging is no longer recommended.
+                  </li>
+                  <li>The console <br>
+                  Most browser support a console eventhough thwy are not part of ECMAScript. It works similar to the alert() method but doe not stop a program execution.
+                  Some Console debugging calls:
+                    <ul>
+                      <li><code>console.log(); </code>// output values of supplied variable parameters to console.</li>
+                      <li><code>console.count();</code> // returns the number of times a function or variable was passed or called.</li>
+                      <li><code>console.dir();</code> //displays an interactive list of objects properties. <br>
+                      example:<code>console.dire(node);</code>// displays a DOM node list <br>
+                    <code>console.dirxml(); </code>//display node list with decendants.</li>
+                      <li><code>console.table();</code>//displays arrays or objects in tabular format</li>
+                      <li></li>
+                    </ul>
+                </li>
+                  <li>Most modern browser (including chrome and firefox have various debusgging tools besides the console and that allow adding breakpoints.</li>
+                </ol>
+              </li>
+              <li>Error Objects:
+                These are used to indentify specific types of error during program execution or they could be created using a constructor so the programmer can 
+                debug his code.
+                These are:
+                <ol type="a">
+                  <li><code>EvalError</code>// error in the <code>eval();</code> fucntion. This is deprecated.</li>
+                  <li><code>RangeError</code>// error when a number is outside allowable range.</li>
+                  <li><code>SyntaxError</code>//error in code syntax or typo</li>
+                  <li><code>ReferenceError</code>// error when calling a function not defined or call to item that does not exist.</li>
+                  <li><code>TypeError</code>//error in type of variable example string in a number field.</li>
+                  <li><code>URIError</code>//error in universal resource indentifier or in decodeing it.</li>
+                  <li><code>InternalError</code>//non standard error in JavaScript</li>
+                  <li>Error object Properties: four standard one are as follows:
+                    <ul>
+                      <li><code>message</code>// returns the description of the error object</li>
+                      <li><code>name</code>//returns the name of the error constructor function.</li>
+                      <li><code>stack</code>//returns the stack trace of the error. Not recommended in production sites.</li>
+                      <li></li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+              <li>Exception Handling
+                Use <code>try</code>, <code>catch</code> and <code>finally</code> to handle exceptions gracefully in production.
+                syntax of the try block is:
+                <pre>
+                  <code>
+                    function nameFuntion(param) { 
+                      'use strict'; 
+                         try {        
+                           return fucntion();    
+                          } catch(error) {        
+                            return function();    
+                          }
+                        }
+                  </code>
+                </pre>
+              </li>
+              <li>Test Frameworks: <br>
+              Jest is a Test Driven (TDD) created by Facebook. Using test framework is recommended. The process involves writing tests (that can fail), write code to pass the tests, refactor code, test refactored code and write more tests for new features and repeat. </li>
+              <li></li>
+            </ul>
+        </section>
+        </div>
+      </main>
+      <footer>
+        <!--footer content goes here-->
+        <p>
+          &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
+          <br />
+        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/wdd330/index.html">Back to homepage</a></span></p>
+        <script src="/wdd330/js/date-time.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
