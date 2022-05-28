@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+:root{
+    --primary-color: rgb(65, 114, 116);
+    --light: rgb(245, 245, 245);
+    --text-on-light: #000;
+    --secondary-color: blanchedalmond;
+    --caution: crimson;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Luxurious Roman", sans-serif;
+    /* padding: 5px 25px; */
+    font-size: 18px;
+    margin: 0;
+    color: var(--text-on-light);
+  }
+  
+.container {
+    display: block;
+    min-width: 350px;
+    border: 1px solid var(--text-on-light);
+    padding: 10px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+li {
+    list-style: none;
+    border-top: 1px solid var(--text-on-light);
+    border-left: 1px solid var(--text-on-light);
+    border-right: 1px solid var(--text-on-light);
+    padding: 5px;
+}
+
+li.item.checked {
+  text-decoration: line-through;
+}
+
+  .todo-items {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+  }
+  input[type='text'] {
+    font-size: large;
+  }
+
+  button.delete-button {
+    float: right;
+  }
+  .delete-button:hover {
+    background-color: var(--caution);
+    color: var(--light);
+    border-color: var(--light);
+    padding: 5px;
+  }
+
+  button.add-button {
+    font-size: large;
+  }
+  .add-button:hover {
+    background-color: var(--primary-color);
+    color: var(--light);
+    border-color: var(--primary-color);
+    border-radius: 3px;
+  }
+
+  .todo-filters {
+    border: 1px solid var(--text-on-light);
+    padding: 10px;
+
+  }
+
+  /* button.tasksAll, button.taskCompleted, button.taskActive {
+    background-color: unset;
+    border: unset;
+  } */
+  /* button.tasksAll:hover,
+  button.taskCompleted:hover,
+  button.taskActive:hover,
+  button.tasksAll:active,
+  button.taskCompleted:active,
+  button.taskActive:active {
+    border: 1px solid var(--text-on-light);
+    border-radius: 2px;
+    padding: 5px;
+  }   */
+
+  .todo-form {
+      padding-top: 50px;
+  }
+  .tasksTodo {
+    font-style: italic;
+    float: right;
+  }
+  select.filter-todos {
+    font-size: large;
+  }

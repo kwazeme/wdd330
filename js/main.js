@@ -18,7 +18,12 @@ const links = [
       {
         label: "Week5 notes - Testing and Debugging. Todo app and Great Hikes",
         url: "week5/index.html"
+      },
+      {
+        label: "Week6 - ToDO Web App Challenge",
+        url: "week6/todo/todo.html"
       }
+
 
   ]
 const ol = document.querySelector("#linkList")
