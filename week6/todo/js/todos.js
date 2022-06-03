@@ -12,7 +12,8 @@ const todoItemsList = document.querySelector('.todo-items');
 const outStandg = document.querySelector('.tasksTodo');
 
 // Get array of todoList
-let todoList = ls.getTodoList;
+// let todoList = ls.getTodoList;
+let todoList = [];
 
 // Add eventlisterner for input submission
 todoForm.addEventListener('submit', function(event) {
@@ -30,7 +31,7 @@ function addNewTodo(task) {
     
   } else {
     // Add tod to localStorage
-    const todo = {id: Date.now(), name: task, completed: false}
+    const todo = {id: Date.now(), name: task, completed: false};
     todoList.push(todo);
     addToLocalStorage(todoList); 
 
@@ -38,6 +39,7 @@ function addNewTodo(task) {
     todoInput.value = '';
   }
 }
+
 
 // function to load todoList 
 function loadTodos(todos) {
