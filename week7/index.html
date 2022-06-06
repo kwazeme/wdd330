@@ -41,7 +41,92 @@
             </p>
             <h4>JNINJA: Further Functions & Ajax</h4>
             <ul>
-                <li><a href="/wdd330/week7/hike-team/hiking-complete.html" target="_blank" rel="noopener noreferrer">Great Hikes Team Project</a></li>
+              <li><b>Great Hikes Project</b> 
+                <ol type="a">
+                  <li><a href="/wdd330/week7/hike-team/hiking-complete.html" target="_blank" rel="noopener noreferrer">Great Hikes Team Project</a></li>
+                  <li></li>
+                </ol>
+              </li>
+              <li><b>Function Properties and Methods </b> <br>
+                Functions are first class objects and have properties and methods.
+                <ol type="a">
+                  <li>length property: <code>nameFunction.length</code>//returns number of parameters the function requires.</li>
+                  <li>Call method: <br>
+                    <code>const param = {name: 'Clark'};</code><br>
+                    <code>nameFunction(){return `Hello, my name is this.name`;}</code><br>
+                    <code>nameFunction.call(param)</code><br>
+                    //the call(param) looks inside the param supplied as parameter looks inside the const param for any name value pair with the same name as this.name and replaces it with this.name with the value.
+                    <br>If the <code>nameFunction</code> requires more parameters those are supplied as arguments following the first parameter.
+                    <br>Example:
+                    <code>
+                      function sayHello(greeting='Hello'){<br>
+                        return `${ greeting }, my name is ${ this.name }`;</code>
+                    <code>sayHello.call(clark, 'How do you do');<br></code>
+                    //output: 'How do you do, my name is Clark'<br>
+                    <code>sayHello.call(bruce);<br></code>
+                    //output: 'Hello, my name is Bruce'<br>
+                    <br>If the there is no first arguement for the <code>call()</code> method, then the null must be used as the forst arguement.
+                    Example: <code>call(null)</code>
+                  </li>
+                  <li>Apply method <br>
+                    <code>apply()</code> // works same as the call method except the arguments after the first argument <code>this</code> <br>
+                    is provided as an array even if the array is one arguement. Example: <code>apply(firstArguement, [nArguement])</code> // firstArguement is the one referred to by <code>this</code><br>
+                    in the function.
+                  </li>
+                </li>
+                <li>Custom Properties: Can be added to a function object by using the assignment operator. <br>
+                Example: <code>nameFunction.newProperty = newPropertyValues</code> // this adds newPropertyValues with the name of newProperty to the nameFunction </li>
+                <li>Memoization: this method is used to cache the results of a function especially if the computation takes time so that instead of computing the results each time it is computed once for each arguement and stored in a cache.
+                  <br>Example syntax:
+                  <code>
+                    function square(x) {<br>
+                      square.cache = square.cache || {}; </code>//checks cache for computation with argument as x and assigns or computes the calculation if not found <br>
+                      <code> if (!square.cache[x]) { <br>
+                        square.cache[x] = x*x;   <br>
+                      }    return square.cache[x]} <br>
+                    </code>
+                    To see what is stored in cache you use <code>square.cache;</code>
+                </li>
+                </ol>             
+              <li>Immediately Invoked Function Expression, IIFE<br>
+              This is a function that is invoked as soon as it was created. To invoke a function we add parenthesis at the end of the function nameFunction
+              <br>Example: <code>nameFunction();</code>// this invokes the nameFunction. However an IIFE does not need to have a name and instead of the name of the function the whole expression of the function
+            takes place of the nameFunction; the parenthesis remain to act as the invocation and the whole expression is placed inside a parenthesis as well.
+          <br>syntax is <code>(function() { functionExpression}());</code></li>
+          <ol type="a">
+            <li>Temporary variables: Variables defined inside an IIFE as have a local scope and are unavailable outside the IIFE.</li>
+            <li>Initialization code: IIFE is used to set up codes that run once on initialization and not needed thereafter. Code blocks do the same as well
+              <code>{code block Expression  }</code>
+            </li>
+            <li>Safe use Strict mode: it is recommended to use strict mode within IIFEs. So the mode works within only code written by you rather than applying to all code especially if working in a team.</li>
+          </ol>
+          <br>
+              <li>Functions can redefine themselves by using the assignment statement outside the function expression itself without parenthesis <br>
+              Or they can rewrite itself by using the assignment statement within the function expression itself.</li>
+              <li>Init-Time branching: can be used to check browser functionality at runtime and then implement a fucntionality according to availbility of the functionality.</li>
+              <li>Recursive Function: calls itself repeatedly for as long as a condition  is not met. Can be used in iterative processes. Example is the factorial of a number that will continue to run until the arguement is 1</li>
+              <li>Callback are functions passed as arguements to another function and then called inside the function they were passed to.</li>
+              <li>Higher order functions are functions that return other fucntions.</li>
+            </ul>
+            <ul>
+              <li> <b>Ajax</b> <br>
+              Ajax is a thechnique that allows browsers to conitnue to update the webpage without reloading it. <br>
+              CORS - cross origin resource sharing allows browsers to access data from across the origin domain. <br>
+              Originally XML data was the format for the data sharing but now is mostly JSON. JavaScript Object Notation; which is natively supported in JavaScript <br>
+              The fetch API - Application Programming Interface is the common technique used by most webapplications for sharing data publicly. Somethings a login may be required or <br>
+              and CORS must be enabled for this to work. The syntax for using the <b>Fetch API</b> is as follows: <br>
+              <code>Fetch('url') <br>
+                    .then () <br>
+                    .catch()</code><br>
+              The response has object used to indicate if the promise was fulfulled:
+              <code>response.ok</code> // true if response was successfull <br>
+              // 201 if resource was created. br
+              // 204 if request successfull but no content returned.
+              // 200 if response was successful <br>
+              <b>Text response</b> can be handled using the method <code>.then( response => response.text() ); </code> // this takes the stream of text from the response and transforms it into JavaScript string. <br>
+              <b>File response</b> handled when the response is a file, image or spreadsheet the <code> .then( response => response.blob() );</code> // transforms response into a blob object <br>
+              <b>JSON response</b> handles response by taking the stream of data and reading it into a JSON object, <code>.then( response => response.json() );</code></li>
+                Example using Fetch API: <b><a href="/wdd330/week7/ajax/ajax.html" target="_blank" rel="noopener noreferrer">Fetch API Sample</a></b>
             </ul>
             
         </section>
