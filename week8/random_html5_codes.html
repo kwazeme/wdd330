@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML5 and CSS3 Codes</title>
+</head>
+<body>
+    <h1>Your Task is in Progress</h1>
+<p>Status: <progress max="100" value="0"><span>0</span>% </progress>
+↵</p>
+<p>Total current disk usage: <meter value="130" min="0" max="320" 
+    ↵low="10" high="300" title="gigabytes">63 GB</meter></p>
+<dl>
+        <dt>Selector:</dt>
+        <dd>The element(s) targeted.</dd>
+        <dt>Property:</dd>
+        <dd>The feature used to add styling to the targeted element, 
+    ↵defined before a colon.</dd>
+        <dt>Value:</dd>
+        <dd>The value given to the specified property, declared after the 
+    ↵colon.</dd>
+</dl>
+<details>
+        <summary>Some Magazines of Note</summary>
+        <ul>
+        <li><cite>Bird Watcher's Digest</cite></li>
+        <li><cite>Rower's Weekly</cite></li>
+        <li><cite>Fishing Monthly</cite></li>
+        </ul>
+</details>
+
+<label for="favcolor">Favorite Color</label>
+<input type="color" list="colors" id="favcolor" name="favcolor">
+
+<datalist id="colors">
+    <option value="#0000FF" label="blue">
+    <option value="#008000" label="green">
+    <option value="#ff0000" label="red">
+    <option value="#663399" label="RebeccaPurple">
+</datalist>
+<form id="search" method="get">
+    <label for="s">Search</label>
+    <input type="search" id="s" name="s">
+    <input type="submit" value="Search">
+</form>
+<video width="375" height="280" poster="teaser.jpg" audio="muted">
+    <source src="example.mp4" type='video/mp4; codecs="avc1.42E01E, 
+↵mp4a.40.2"'>
+    <source src="example.webm" type='video/webm; codecs="vp8, 
+↵vorbis"'>
+    <source src="example.ogv" type='video/ogg; codecs="theora, 
+↵vorbis"'>
+    <!-- fallback to Flash: -->
+    <object width="375" height="280" type="application/x-shockwave-
+↵flash" data="mediaplayer-5.5/player.swf">
+    <param name="movie" value="mediaplayer-5.5/player.swf">
+    <param name="allowFullScreen" value="true">
+    <param name="wmode" value="transparent">
+    <param name="flashvars" value="controlbar=over&image=images/
+↵teaser.jpg&file=example.mp4">
+    <!-- fallback image -->
+    <img src="teaser.jpg" width="375" height="280" alt="" title="No 
+↵video playback capabilities">
+    </object>
+</video>
+<!-- More Video encoding -->
+<video src="example.webm">
+    <track kind="subtitles" src="example.en.vtt" srclang="en" label="English" default>
+    <track kind="captions" src="example.en.hoh.vtt" srclang="en" label
+↵="English for the Hard of Hearing">
+    <track kind="subtitles" src="example.fr.vtt" srclang="fr" 
+↵lang="fr"label="Français">
+    <track kind="subtitles" src="example.de.vtt" srclang="de" 
+↵lang="de" label="Deutsch">
+</video>
+<!-- SVG sample code -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+    <circle cx="50" cy="50" r="25" fill="red"/>
+</svg>
+</body>
+</html> 

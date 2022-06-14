@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>WDD330: Portfolio of Work - Spring 2022</title>
+    <meta name="description" content="WDD230: Assignment Portal; Winter 2022">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wdd330/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wdd330/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wdd330/images/favicon-16x16.png">
+    <link rel="manifest" href="/wdd330/images/site.webmanifest">
+    <link rel="mask-icon" href="/wdd330/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-config" content="browserconfig.xml">
+  	<meta name="author" content="Kwazeme Ogubie">
+    <link rel="stylesheet" href="/wdd330/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/wdd330/css/base.css" />
+    <link rel="stylesheet" href="/wdd330/css/medium.css">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <!--logo-box and nav-bar goes here-->
+      </header>
+      <main>
+        <!--top-banner-box start-->
+        <div class="top-banner">
+          <h2>Week 8</h2>
+        </div>
+        <!--main content start-->
+        <div class="main-content">
+          <section>
+            <p>
+              Notes:<br />
+            </p>
+            <h4>Team Activity: Working with a remote API</h4>
+            <ul>
+                <li><a href="/wdd330/week8/swapi-team/swapi.html" target="_blank" rel="noopener noreferrer">Team code in Progress</a></li>
+                <li><a href="/wdd330/week8/swapi-sol/swapi.html" target="_blank" rel="noopener noreferrer">Solution Completed</a></li>
+                <li><a href="/wdd330/week8/random_html5_codes.html" target="_blank" rel="noopener noreferrer">random_html5_codes to note</a></li>
+            </ul>
+            <h4>HTMLCSS2: Transforms and Transitions</h4>
+            <ul>
+              <li>Preliminary Notes from HTMLCSS2 study from other chapters:
+                <ol type="a">
+                  <li>Use autoprefixer for custom vendor codes for your CSS. However, online methods are recommeded for upto date information. 
+                    <br><a href="http://pleeease.io/play" target="_blank" rel="noopener noreferrer">pleeease</a>
+                  </li>
+                  <li><a href="/wdd330/week8/random_html5_codes.html/" target="_blank" rel="noopener noreferrer"></a></li>
+                  <li><code>defer</code>//Use for delaying script loading to after page completed loading. Will load scripts in order in which they appear.</li>
+                  <li><code>async</code>//same as <code>defer</code> but will not load scripts in any order, only order is as soon as they are available.</li>
+                  <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">HTML5 Living Standards</a></li>
+                  <li><a href="https://github.com/philipwalton/html-inspector" target="_blank" rel="noopener noreferrer">HTML5 validator</a> <code>HTMLInspector.inspect()</code>//run from JavaScript console to see suggestion on how to improve your code.</li>
+                  <li> To ensure block and inline CSS3 elements display properly in older browsers you may use this code to make sure older browsers know which element should display in block.
+                    <code><pre>
+article, aside, figure, footer, header, main, nav, section { 
+  display: block; 
+}</pre>
+                    </code>
+                  </li>              
+                </ol>
+              </li>
+              <li>CSS Transforms: <code>transform</code>// used to  translate, rotate, scale or skew elements on the page.</li>
+              <li>CSS Translate: <code>translate</code>// used to move elements right, left, up or down and works similar to <code>position: relative</code></li>
+              <li>Note: Use animations, scaling, transforms and translations in places were it makes sense and enhances UX.
+                <br>Just because you can does not mean you should.
+              </li>
+            </ul>
+              <h4>HTMLCSS2: Canvas, SVG, Drag and Drop</h4>
+                <ul>
+                  <li>Canvas:
+                    <ol type="a">
+                      <li>Check support for canvas API using the code:
+                        <code>
+                          <pre>
+<canvas>
+    Sorry! Your browser doesn’t support Canvas.
+</canvas>
+                          </pre>
+                        </code> //if code is shown browser does not support canvas API.
+                      </li>
+                      <li>The canvas coordinate system: top left of a rectangle is (0,0) and bottom right is last point or (maxX,maxY)b</li>
+                    </ol>
+                  </li>
+                  <li>SVG, Scalable Vector Graphics: Can be used in much to same way as canvas to draw content but SVG objects are accesible via the DOM 
+                    <br> and since it is drawn by using XML SVG objects are also search engine friendly.
+                    <br>SVG Resources:
+                    <ol>
+                      <li><a href="http://inkscape.org/" target="_blank" rel="noopener noreferrer">SVG Image editor</a></li>
+                      <li><a href="http://openclipart.org/" target="_blank" rel="noopener noreferrer">Public Royalty free SVG cliparts</a></li>
+                      <li><a href="http://raphaeljs.com/" target="_blank" rel="noopener noreferrer">Opensource JavaScript library for drawing and animating SVG</a></li>
+                    </ol>
+                  </li>
+                  <li>Drag and Drop API: used for dragging and dropping certain element in the page onto other elements and to specify what happens when this is done.
+                    <br>This API is not supported in Android and IOs
+                    <br>EventListeners hooks for Drag and Drop: 
+                    <ol type="a">
+                      <li><code>dragable</code>// attribute property for an item to indicate it can be dragged. It is not Boolean and must be set to true, like so, <code>dragable="true"</code></li>
+                      <li><code>drop</code>//Fires when you drop an item.</li>
+                      <li><code>dragover</code>//Fires when item is dragged over another</li>
+                      <li><code>dragstart</code></li>
+                    </ol>
+                  </li>
+                </ul>
+
+            
+            
+            
+        </section>
+        </div>
+      </main>
+      <footer>
+        <!--footer content goes here-->
+        <p>
+          &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
+          <br />
+        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/wdd330/index.html">Back to homepage</a></span></p>
+        <script src="/wdd330/js/date-time.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>

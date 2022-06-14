@@ -5,7 +5,13 @@ const outputDiv = document.querySelector('#output');
 
 // Get the URL for Fetch
 const textURL = 'http://numbersapi.com/random';
-const apiURL = 'http://api.chucknorris.io/jokes/random';
+const apiURL =  new Request('http://api.chucknorris.io/jokes/random', {
+    method: 'GET',
+    mode: 'cors',
+    redirect: 'follow',
+    cache: 'no-cache'
+    
+});
 
 // Get Random number fact
 textButton.addEventListener('click', () => {

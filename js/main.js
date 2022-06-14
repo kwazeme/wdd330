@@ -26,6 +26,10 @@ const links = [
       {
         label: "Week7 - Further Functions, Ajax and Great Hikes",
         url: "week7/index.html"
+      },
+      {
+        label: "Week8 - Fetch API",
+        url: "week8/index.html"
       }
 
 
