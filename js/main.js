@@ -30,6 +30,10 @@ const links = [
       {
         label: "Week8 - Fetch API",
         url: "week8/index.html"
+      },
+      {
+        label: "Week9 - Window Object & APIs",
+        url: "week9/index.html"
       }
 
 
