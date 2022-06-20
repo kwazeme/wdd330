@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>WDD330: Portfolio of Work - Spring 2022</title>
+    <meta name="description" content="WDD230: Assignment Portal; Winter 2022">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wdd330/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wdd330/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wdd330/images/favicon-16x16.png">
+    <link rel="manifest" href="/wdd330/images/site.webmanifest">
+    <link rel="mask-icon" href="/wdd330/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-config" content="browserconfig.xml">
+  	<meta name="author" content="Kwazeme Ogubie">
+    <link rel="stylesheet" href="/wdd330/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/wdd330/css/base.css" />
+    <link rel="stylesheet" href="/wdd330/css/medium.css">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <!--logo-box and nav-bar goes here-->
+      </header>
+      <main>
+        <!--top-banner-box start-->
+        <div class="top-banner">
+          <h2>Week 9</h2>
+        </div>
+        <!--main content start-->
+        <div class="main-content">
+          <section>
+            <p>
+              Notes:<br />
+                <ul>
+                    <li>
+                        <a href="/wdd330/week9/drumkit/index-START.html" target="_blank" rel="noopener noreferrer">Drumkit Team ativity</a>
+                    </li>
+                    <li>Window Object
+                        <ol type="a">
+                            <li><code>window</code>// the window object is the global variable in a browser.</li>
+                            <li><code>alert()</code>, <code>confirm()</code> and <code>prompt()</code>// these generate dialogs that terminate program execution and should be used with caution.</li>
+                            <li><code>document</code>//document object exists within the <code>window</code> object</li>
+                            <li>Methods/Objects of the <code>window</code> and <code>document</code> objects: <br>
+                                <ol>
+                                    <li>The <code>window.navigator</code>// object gives information about the user’s browser and operating system</li>
+
+                                    <li>The <code>window.location </code>// object provides information about the URL of the current page.</li>
+                                    
+                                    <li>The <code>window.history </code> //object keeps information about the pages that have been visited in the session.</li>
+                                    
+                                    <li>The <code>window.screen </code>// object provides information about the user’s screen.</li>
+                                    
+                                    <li> <code>document.write()</code> //is an archaic method of writing text to the document and should be avoided.</li>
+                                    
+                                    <li> Use Cookies to store small pieces of information between requests using the <code>document.cookie </code> property.</li>
+                                    
+                                    <li>The <code>window.setTimeout()</code> //method can be used to invoke a function after a set amount of time. It can be canceled using the clearTimeout() method.</li>
+                                    
+                                    <li>The <code>window.setInterval()</code> //method can be used to repeatedly invoke a function. It can be stopped using the clearInterval() method.</li>
+                                    
+                                    <li> The <code>window.requestAnimationFrame()</code>// method can be used to produce smooth and optimized animation by utilizing the browser's built-in graphics capabilities. It can be canceled using the cancelAnimationFrame() method. </li>
+                                </ol>
+      
+                            </li>
+                            <li>Shims and Polyfills are used to assist with broswer compactibility with newer APIs</li>
+
+                        </ol>
+
+                    </li>
+                    <li>HTML5 APIs
+                        <ol type="a">
+                            <li>HTML5 is latest HTML version and includes several API
+                                <ol>
+                                    <li>Web storage API - allows the storage of key-value pairs as found in localStorage.</li>
+                                    <li>Geolocation API - used to access the coordinates of the user device when permission is allowed.</li>
+                                    <li>Web Worker API - for performing intensive computations</li>
+                                    <li>Web Sockets API - exposes a protocol for two way communication in real time throught the browser</li>
+                                    <li>NOtification API - used to display notifications on user device.</li>
+                                    <li></li>
+                                </ol>
+                            </li>
+                        </ol>
+                        <li></li>
+                    </li>
+
+                </ul>
+            </h4></h4>
+           </section>
+        </div>
+      </main>
+      <footer>
+        <!--footer content goes here-->
+        <p>
+          &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
+          <br />
+        Last Updated: <span id="lastupdated"></span><br /><span id="backhome"><a href="/wdd330/index.html">Back to homepage</a></span></p>
+        <script src="/wdd330/js/date-time.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
