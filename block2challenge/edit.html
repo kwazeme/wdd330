@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="WDD330: Portfoloio of Work">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-config" content="browserconfig.xml">
+  	<meta name="author" content="Kwazeme Ogubie">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Block 2 Challenge | Notes App</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="header__title">When Inspiration Strikes...Take Note</h1>
+            <h2 class="header__quote"></h2>
+            <h2 class="header__author"></h2>
+        </div>
+    </div>
+    <div class="action">
+        <div class="actions__container actions__container--spaced">
+            <a href="./index.html">View All Notes</a><span id="time-stamp"></span>
+        </div>
+    </div>    
+    <div class="note-sidebar">
+        <div class="saved-notes"><!-- sidebar -->
+        <div class="notes" id="app"></div></div>
+        <div class="container">
+            <input type="text" id="note-title" class="title-input" placeholder="Title of note">
+            <textarea name="" id="note-body" class="body-input" cols="30" rows="10" placeholder="Capture your thoughts here"></textarea>
+            <button id="add-note" class="button notes__add">Save this note</button>
+        </div>
+      </div>
+</body>
+<footer>
+    <!--footer content goes here-->
+    <p>
+      &copy; <span id="currentyear"></span>. Kwazeme Ogubie - WDD330 -  Spring 2022
+      <br />
+    Last Updated: <span id="lastupdated"></span></p>
+    <script src="./js/date-time.js"></script>
+    <script src="./js/quote.js"></script>
+    <script src="./js/main.js" type="module"></script>
+  </footer>
+
+</html>
